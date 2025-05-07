@@ -1,0 +1,2 @@
+# Calculator
+🔢 Web Calculator using HTML, CSS &amp; JavaScript  &lt;br> A simple and responsive calculator built with HTML, CSS, and vanilla JavaScript. It supports basic arithmetic operations and provides a clean user interface suitable for all devices.
