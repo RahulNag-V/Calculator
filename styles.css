@@ -1,74 +1,81 @@
-/* Body styling for center alignment */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
+  animation: fadeIn 2s ease-in-out;
 }
 
-/* Calculator Container Styling */
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .calculator {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  width: 320px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
 }
 
-/* Input styling for result */
-#result {
+.display {
   width: 100%;
   height: 50px;
-  font-size: 28px;
+  font-size: 2em;
   text-align: right;
+  border: none;
+  background-color: #f1f1f1;
   margin-bottom: 20px;
   padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
 }
 
-/* Button Grid Styling */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
-.buttons button {
-  height: 60px;
-  font-size: 24px;
+.btn {
+  background-color: #f0f0f0;
+  font-size: 1.5em;
+  padding: 20px;
   border: none;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.buttons button:hover {
-  background: rgba(255, 255, 255, 0.3);
+.btn:hover {
+  background-color: #ff7e5f;
+  color: white;
   transform: scale(1.1);
 }
 
-/* Special button styling */
-.clear {
-  grid-column: span 4;
-  background: rgba(255, 0, 0, 0.7);
+.operator {
+  background-color: #feb47b;
 }
 
-.equals {
-  background: rgba(0, 128, 0, 0.7);
+.operator:hover {
+  background-color: #ff7e5f;
 }
 
-button:active {
-  transform: scale(0.98);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
